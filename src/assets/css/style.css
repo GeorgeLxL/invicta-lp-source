@@ -1,0 +1,1291 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    max-width: 100%;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+img, svg {
+    vertical-align: middle;
+    height: auto;
+}
+.sp {
+    display: none;
+}
+.container {
+    width: 1080px;
+    margin: auto;
+}
+:target {
+    scroll-margin-top: 67px;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 20px 0;
+    z-index: 1000;
+    transition: all .3s ease;
+}
+.header-scroll {
+    background-color: rgba(0, 0, 0, .3);
+    padding: 10px 0;
+}
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .container>a img {
+    width: 50px;
+}
+
+header nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header nav ul li {
+    padding-left: 30px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+header nav ul li a {
+    position: relative;
+}
+header nav ul li a::after {
+    position: absolute;
+    content: '';
+    max-width: unset;
+    left: -4%;
+    bottom: -3px;
+    border-top: 2px solid white;
+    transform-origin: 0%;
+    transition: all .3s ease;
+    width: 0;
+}
+header nav ul li a:hover::after {
+    width: 108%;
+}
+header nav ul li:last-child a {
+    padding: 10px 15px;
+    background-color: #297afb;
+    border: 2px solid #297afb;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .16);
+    transition: all .3s ease;
+}
+header nav ul li:last-child a::after {
+    display: none;
+}
+header nav ul li:last-child a:hover {
+    background-color: white;
+    color: #297afb;
+}
+.menu_btn {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.menu_btn span {
+    width: 40px;
+    height: 2px;
+    margin: 6px 0;
+    background-color: white;
+    transition: all .3s;
+}
+.menu_btn_open span:nth-child(1) {
+    transform: rotate(135deg) translate(10px, -10px);
+}
+.menu_btn_open span:nth-child(2) {
+    opacity: 0;
+    width: 0;
+}
+.menu_btn_open span:nth-child(3) {
+    transform: rotate(-135deg) translate(10px, 10px);
+}
+menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+    opacity: 0;
+    transform: translateY(-30%);
+    transition: all .3s ease;
+}
+menu nav ul {
+    list-style-type: none;
+    text-align: center;
+}
+menu nav ul li {
+    padding: 10px 0;
+    font-size: 24px;
+    font-weight: 500;
+    color: white;
+}
+.menu_open {
+    z-index: 999;
+    opacity: 1;
+    transform: translateY(0);
+}
+.body_menu_open {
+    overflow: hidden;
+}
+.to-top {
+    position: fixed;
+    right: 20px;
+    bottom: 40px;
+    width: 50px;
+    height: 50px;
+    border-radius: 99px;
+    background-color: #297afb;
+    font-size: 20px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: -3px -3px 5px rgba(222, 222, 222, .3),3px 3px 5px rgba(0, 0, 0, .6);
+    z-index: 20;
+    transform: translateY(100px);
+    transition: all .5s ease;
+}
+.show-to-top {
+    transform: translateY(0);
+}
+.banner {
+    background-image: url('../img/banner-back.jpg');
+    background-position: center center;
+    background-size: cover;
+    padding-top: 200px;
+    padding-bottom: 100px;
+    color: white;
+}
+.banner h1 {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 65px;
+    font-weight: 300;
+    color: white;
+}
+.banner p {
+    font-size: 24px;
+    text-align: center;
+    width: 840px;
+    margin: 1em auto;
+    line-height: 2;
+}
+.banner-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.banner-link a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 20px;
+    border-radius: 5px;
+    transition: all .3s ease;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .16);
+}
+.banner-link a:first-child {
+    background-color: #297afb;
+    color: white;
+    border: 2px solid #297afb;
+    margin-right: 20px;
+}
+.banner-link a:last-child {
+    background-color: white;
+    color: black;
+    border: 2px solid white;
+}
+.banner-link a:first-child:hover {
+    background-color: white;
+    color: #297afb;
+}
+.banner-link a:last-child:hover {
+    background-color: #297afb;
+    border-color: #297afb;
+    color: white;
+}
+.banner-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-top: 80px;
+}
+.browser {
+    position: relative;
+    border-radius: 6px;
+    overflow: hidden;
+    width: 100%;
+    z-index: 2;
+    background-size: auto 30px;
+    box-shadow: 0 20px 30px 0 rgb(0 0 0 / 10%);
+    position: relative;
+}
+.browser::before {
+    content: "";
+    height: 30px;
+    line-height: 30px;
+    display: block;
+    width: 100%;
+    position: relative;
+    background: linear-gradient(-180deg,#fafbfc 0,#f1f4f7 100%);
+}
+.browser::after {
+    content: "";
+    width: 12px;
+    height: 12px;
+    background: #e2e5e5;
+    position: absolute;
+    border-radius: 50%;
+    top: 10px;
+    left: 8px;
+    box-shadow: 18px 0 0 #e2e5e5, 36px 0 0 #e2e5e5;
+}
+.iphone {
+    display: inline-block;
+    background: linear-gradient(#f4f4f4,#f2f2f2);
+    box-shadow: inset 0 0 1px 1px #dbdcdd, inset 0 0 1px 4px #efefef, inset 0 0 0 5px #fff, inset 0 0 0 6.5px #edf1f2, inset 5px 0 7px 5px #fff, inset -5px 0 7px 5px #fff;
+    border-radius: 35px;
+    padding: 50px 15px 60px;
+    position: relative;
+}
+.iphone::before {
+    content: "";
+    width: 60px;
+    height: 6px;
+    border-radius: 10px;
+    position: absolute;
+    box-shadow: inset 0 4px 3px 0 #e6e6e6, inset 0 0 0 2px #ececec;
+    top: 26px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.iphone::after {
+    content: "";
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    position: absolute;
+    box-shadow: inset 0 -2px 0.2px 0 #d5d5d5, inset 0 0 0 2.5px #e8e8e8;
+    bottom: 14px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.ipad {
+    border-radius: 35px;
+    overflow: hidden;
+    padding: 15px 70px;
+    background: linear-gradient(#f4f4f4,#f2f2f2);
+    box-shadow: inset -7px 0 0.4px -7px #e5e5e5, inset 7px 0 0.4px -7px #eaeaea, inset 0 4px 1px -3px #ddd, inset 0 -5px 1px -4px #8a8a8a, inset 0 0 0 2px #fff, inset 0 0 0 3px rgb(0 0 0 / 8%), inset 1px 0 0 4px #fff, inset -1px 0 0 4px #fff, inset 2px 0 0.2px 5px rgb(0 0 0 / 5%), inset -2px 0 0.2px 5px rgb(0 0 0 / 5%), inset 12px 0 0.2px -1px #fff, inset -12px 0 0.2px -1px #fff;
+    display: inline-block;
+    position: relative;
+    left: 70px;
+    max-width: unset;
+    vertical-align: middle;
+}
+.ipad img {
+    min-width: 875px;
+}
+.banner .iphone {
+    z-index: 2;
+    margin-left: -150px;
+}
+section {
+    padding: 80px 0;
+}
+.section-title {
+    text-align: center;
+    font-weight: 500;
+    font-size: 40px;
+    margin-bottom: 40px;
+    color: #666666;
+    text-shadow: 0 0  5px rgba(0, 0, 0, .4);
+}
+.work .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.work-content {
+    width: 50%;
+    padding-right: 40px;
+}
+.work .container > img {
+    width: 50%;
+}
+.work-card {
+    position: relative;
+    padding-left: 90px;
+    margin-bottom: 20px;
+}
+.work-card:last-child {
+    margin-bottom: 0;
+}
+.work-card img {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.work-card h3 {
+    font-size: 22px;
+}
+.work-card p {
+    font-size: 20px;
+    color: #666666;
+    line-height: 2;
+}
+.work-more {
+    overflow: hidden;
+}
+.work-more .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.work-more-content {
+    width: 50%;
+    padding-right: 40px;
+}
+.work-more-img {
+    width: 50%;
+    position: relative;
+    padding-bottom: 30px;
+}
+.work-more-img .iphone {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+}
+.work-more-content h2 {
+    font-size: 40px;
+    font-weight: 400;
+}
+.work-more-content > p {
+    font-size: 21px;
+    margin: 30px 0;
+}
+.work-more-content ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+}
+.work-more-content ul li {
+    width: 50%;
+    padding-inline-start: 50px;
+    font-size: 18px;
+    margin-bottom: 1em;
+    position: relative;
+}
+.work-more-content ul li::after {
+    border-left: 3px solid #01d8fd;
+    border-bottom: 3px solid #01d8fd;
+    height: 10px;
+    width: 16px;
+    transform: rotate(-45deg);
+    content: '';
+    position: absolute;
+    left: 8px;
+    top: 8px;
+    border-radius: 1px;
+}
+.team {
+    background-color: #f0f0f0;
+}
+.team p {
+    text-align: center;
+    font-size: 20px;
+    color: #999999;
+}
+.team-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 40px;
+}
+.team-card {
+    background-color: white;
+    border: 1px solid #e5e5e5;
+    border-radius: 5px;
+    padding: 40px;
+    width: 390px;
+    margin: 20px;
+    text-align: center;
+    position: relative;
+    transition: all .5s ease;
+}
+.team-card:hover {
+    box-shadow: 0 0 8px rgba(0, 0, 0, .4);
+}
+.team-card-img {
+    width: 150px;
+    height: 150px;
+    margin: auto;
+    border-radius: 999px;
+    overflow: hidden;
+}
+.team-card .team-card-img img {
+    filter: grayscale(1);
+    transition: all .6s ease;
+}
+.team-card:hover .team-card-img img {
+    filter: grayscale(0);
+}
+.team-card h3 {
+    font-size: 24px;
+    font-weight: 500;
+    margin-top: 20px;
+}
+.team-card h4 {
+    font-size: 22px;
+    font-weight: 400;
+    margin-top: 20px;
+}
+.team-card p {
+    margin-top: 20px;
+    margin-bottom: 60px;
+}
+.team-card-link {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 40px;
+}
+.team-card-link a {
+    display: flex;
+    border-radius: 50%;
+}
+.team-card-link a:first-child {
+    margin-right: 10px;
+}
+.partners-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.partners-container img {
+    height: 70px;
+    width: auto;
+}
+.voice img {
+    width: 80px;
+    height: 80px;
+    display: block;
+    margin: auto;
+    border-radius: 50%;
+    border: 3px solid #297afb;
+    margin-top: 20px;
+}
+.voice p {
+    text-align: center;
+    font-size: 20px;
+}
+.voice .swiper-slide {
+    padding: 0 15%;
+    text-align: center;
+}
+.voice h3 {
+    margin: 20px 0;
+    font-size: 20px;
+    color: #999999;
+    font-weight: 400;
+}
+.voice h4 {
+    font-size: 20px;
+    color: #999999;
+    font-weight: 500;
+}
+.swiper-button-next, .swiper-button-prev {
+    width: 50px !important;
+    height: 50px !important;
+    border-radius: 90px !important;
+    background-color: #007aff;
+    color: white !important;
+}
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    font-size: 20px !important;
+}
+.faq-container {
+    width: 840px;
+    margin: auto;
+}
+.faq-card {
+    border-bottom: 1px solid #d5d5d5;
+}
+.faq-card:last-child {
+    border-bottom: none;
+}
+.faq-q {
+    padding: 20px 40px 20px 20px;
+    position: relative;
+    cursor: pointer;
+}
+.faq-q::after {
+    position: absolute;
+    content: '';
+    border-left: 3px solid #01d8fd;
+    border-bottom: 3px solid #01d8fd;
+    width: 12px;
+    height: 12px;
+    right: 20px;
+    top: calc(50% - 10px);
+    transform: rotate(-45deg);
+    transition: all .3s;
+}
+.faq-show .faq-q::after {
+    transform: rotate(135deg);
+}
+.faq-q h3 {
+    font-weight: 500;
+    font-size: 24px;
+}
+.faq-a {
+    overflow: hidden;
+    max-height: 0;
+    transition: all .3s ease;
+}
+.faq-a p {
+    padding: 0 20px 20px;
+    font-size: 20px;
+}
+.arabic {
+    background-image: url('../img/arabic-back.jpeg');
+    background-position: center center;
+    background-size: cover;
+    color: white;
+    text-align: center;
+}
+.arabic h2 {
+    font-weight: 400;
+    font-size: 40px;
+    width: 640px;
+    margin: auto;
+}
+.arabic p {
+    font-size: 22px;
+    line-height: 1.8;
+    margin: 1em 0;
+}
+.arabic-link {
+    text-align: center;
+    margin: 50px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.arabic a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    background-color: #297afb;
+    border: 2px solid #297afb;
+    padding: 10px 20px;
+    white-space: nowrap;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .16);
+    transition: all .3s ease;
+}
+.arabic a span:first-child {
+    font-size: 1.5em;
+    font-weight: 600;
+    margin-right: .5em;
+}
+.arabic a:hover {
+    background-color: white;
+    color: #297afb;
+}
+.podcast {
+    background-image: url('../img/podcast-back.jpg');
+    background-size: cover;
+    background-position: center center;
+    color: white;
+}
+.podcast h2 {
+    font-size: 50px;
+    font-weight: 400;
+    text-align: center;
+    width: 720px;
+    margin: auto;
+    text-shadow: 0 0 8px rgba(0, 0, 0, .6);
+    margin-bottom: 40px;
+}
+.podcast-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.podcast a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    background-color: #297afb;
+    border: 2px solid #297afb;
+    padding: 15px 20px;
+    white-space: nowrap;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .16);
+    transition: all .3s ease;
+}
+.podcast a img {
+    margin-left: 5px;
+}
+.podcast a:hover {
+    background-color: white;
+    color: #297afb;
+}
+footer {
+    background-image: linear-gradient(to bottom, #297afb, #01d8fd);
+    padding: 100px 0;
+    color: white;
+    text-align: center;
+}
+footer h2 {
+    font-size: 20px;
+    font-weight: 400;
+}
+.footer-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+footer a {
+    border-radius: 50px;
+    overflow: hidden;
+    margin-right: 10px;
+}
+footer a:last-child {
+    margin-right: 0;
+}
+
+@media (max-width: 1100px) {
+    .container {
+        width: 840px;
+    }
+    .iphone {
+        padding: 50px 15px 60px;
+        border-radius: 30px;
+    }
+    .iphone::before {
+        width: 50px;
+        top: 24px;
+    }
+    .iphone::after {
+        width: 34px;
+        height: 34px;
+    }
+    .iphone img {
+        width: 200px;
+    }
+    .work-card {
+        padding-left: 70px;
+    }
+    .work-card img {
+        width: 55px;
+    }
+    .work-card h3 {
+        font-size: 17px;
+    }
+    .work-card p {
+        font-size: 15px;
+    }
+    .ipad img {
+        min-width: 750px;
+    }
+    .work-more-content h2 {
+        font-size: 32px;
+    }
+    .work-more-content > p {
+        font-size: 18px;
+        margin: 1.2em 0;
+    }
+    .work-more-content ul li {
+        font-size: 15px;
+        padding-inline-start: 36px;
+    }
+    .work-more-content ul li::after {
+        height: 9px;
+        width: 14px;
+        top: 6px;
+    }
+    .team p {
+        font-size: 18px;
+    }
+    .team-card {
+        width: 360px;
+    }
+    .team-card .team-card-img img {
+        filter: grayscale(0);
+    }
+    .voice .swiper-slide {
+        padding: 0 10%;
+    }
+    .arabic p {
+        font-size: 20px;
+    }
+    .arabic-link {
+        margin: 40px auto;
+    }
+}
+@media (max-width: 900px) {
+    .container {
+        width: 720px;
+    }
+    .banner h1 {
+        font-size: 60px;
+    }
+    .banner p {
+        font-size: 20px;
+    }
+    .iphone {
+        padding: 40px 15px 50px;
+        border-radius: 25px;
+    }
+    .iphone::before {
+        width: 40px;
+        top: 18px;
+    }
+    .iphone::after {
+        width: 26px;
+        height: 26px;
+    }
+    .iphone img {
+        width: 170px;
+    }
+    section {
+        padding: 60px 0;
+    }
+    .section-title {
+        font-size: 36px;
+    }
+    .work .container {
+        flex-direction: column-reverse;
+    }
+    .work-content {
+        width: 100%;
+        padding-right: 0;
+        padding-top: 40px;
+    }
+    .work .container > img {
+        width: 100%;
+        max-width: 500px;
+    }
+    .work-card {
+        padding-left: 90px;
+    }
+    .work-card img {
+        width: 65px;
+    }
+    .work-card h3 {
+        font-size: 24px;
+    }
+    .work-card p {
+        font-size: 18px;
+    }
+    .work-more .container {
+        display: block;
+    }
+    .work-more-content {
+        width: 100%;
+        padding-right: 0;
+    }
+    .work-more-img {
+        width: 100%;
+        padding-top: 40px;
+    }
+    .ipad img {
+        min-width: 620px;
+    }
+    .work-more-content h2 {
+        text-align: center;
+        font-size: 36px;
+    }
+    .work-more-content > p {
+        font-size: 22px;
+    }
+    .work-more-content ul li {
+        font-size: 18px;
+        padding-inline-start: 50px;
+    }
+    .work-more-content ul li::after {
+        height: 10px;
+        width: 16px;
+        top: 8px;
+    }
+    .team p {
+        font-size: 16px;
+    }
+    .team-card {
+        width: 320px;
+    }
+    .partners-container img {
+        height: 60px;
+    }
+    .voice p {
+        font-size: 17px;
+    }
+    .faq-q h3 {
+        font-size: 20px;
+    }
+    .faq-a p {
+        font-size: 17px;
+    }
+    .arabic h2 {
+        font-size: 36px;
+    }
+    .arabic p {
+        font-size: 17px;
+    }
+    .podcast h2 {
+        font-size: 44px;
+    }
+    footer {
+        padding: 80px 0;
+    }
+}
+@media (max-width: 767px) {
+    .container {
+        width: 640px;
+    }
+    .banner h1 {
+        font-size: 54px;
+    }
+    .iphone img {
+        width: 150px;
+    }
+    .work-more-img {
+        padding-bottom: 25px;
+    }
+    .ipad img {
+        min-width: 580px;
+    }
+    .team p {
+        font-size: 18px;
+    }
+    .team-card {
+        width: 280px;
+        padding: 30px;
+    }
+    .team-card-img {
+        width: 100px;
+        height: 100px;
+    }
+    .team-card h3 {
+        font-size: 20px;
+        margin-top: 15px;
+    }
+    .team-card h4 {
+        font-size: 18px;
+        margin-top: 1em;
+    }
+    .team-card p {
+        font-size: 14px;
+        margin-top: 1em;
+    }
+    .swiper-button-next, .swiper-button-prev {
+        width: 40px !important;
+        height: 40px !important;
+    }
+    .swiper-button-next::after,
+    .swiper-button-prev::after {
+        font-size: 15px !important;
+    }
+    .swiper-button-next {
+        right: 0 !important;
+    }
+    .swiper-button-prev {
+        left: 0 !important;
+    }
+    .voice .swiper-slide {
+        padding: 0 60px;
+    }
+    .arabic p {
+        font-size: 15px;
+    }
+    .podcast h2 {
+        font-size: 40px;
+    }
+}
+@media (max-width: 700px) {
+    .container {
+        width: 580px;
+    }
+    .banner h1 {
+        font-size: 48px;
+    }
+    .banner p {
+        font-size: 18px;
+    }
+    .banner .iphone {
+        display: none;
+    }
+    .banner-bottom {
+        padding-top: 60px;
+    }
+    .work-card {
+        padding-left: 90px;
+    }
+    .work-card img {
+        width: 65px;
+    }
+    .work-card h3 {
+        font-size: 22px;
+    }
+    .work-card p {
+        font-size: 18px;
+    }
+    .team-card {
+        width: 360px;
+        margin: 20px 0;
+        padding: 40px;
+    }
+    .team-card-img {
+        width: 150px;
+        height: 150px;
+    }
+    .team-card h3 {
+        font-size: 24px;
+        margin-top: 20px;
+    }
+    .team-card h4 {
+        font-size: 22px;
+    }
+    .team-card p {
+        font-size: 18px;
+    }
+    .partners-container img {
+        height: 55px;
+    }
+    .arabic p {
+        font-size: 18px;
+    }
+    .podcast h2 {
+        font-size: 38px;
+    }
+    .footer-link {
+        margin-top: 40px;
+    }
+}
+@media (max-width: 600px) {
+    .container {
+        width: 480px;
+    }
+    header nav {
+        display: none;
+    }
+    .menu_btn {
+        display: flex;
+    }
+    .banner {
+        padding-bottom: 80px;
+    }
+    .banner h1 {
+        font-size: 40px;
+    }
+    section {
+        padding: 50px 0;
+    }
+    .section-title {
+        font-size: 32px;
+        margin-bottom: 30px;
+    }
+    .work-card {
+        padding-left: 75px;
+    }
+    .work-card img {
+        width: 56px;
+    }
+    .work-card h3 {
+        font-size: 18px;
+    }
+    .work-card p {
+        font-size: 16px;
+    }
+    .work-more-content h2 {
+        font-size: 32px;
+    }
+    .work-more-content > p {
+        font-size: 20px;
+    }
+    .work-more-content ul li {
+        font-size: 16px;
+        padding-inline-start: 40px;
+    }
+    .partners-container img {
+        height: 50px;
+    }
+    .voice p {
+        font-size: 15px;
+    }
+    .voice img {
+        width: 70px;
+        height: 70px;
+        margin-top: 15px;
+    }
+    .voice h3 {
+        font-size: 16px;
+        margin: 1em 0;
+    }
+    .voice h4 {
+        font-size: 16px;
+    }
+    .faq-q h3 {
+        font-size: 16px;
+    }
+    .faq-a p {
+        font-size: 14px;
+    }
+    .arabic h2 {
+        font-size: 32px;
+    }
+    .arabic p {
+        font-size: 17px;
+    }
+    .podcast h2 {
+        font-size: 34px;
+    }
+    footer {
+        padding: 60px 0;
+    }
+}
+@media (max-width: 500px) {
+    .container {
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .banner {
+        padding-top: 150px;
+        padding-bottom: 60px;
+    }
+    .banner h1 {
+        font-size: 32px;
+    }
+    .banner p {
+        font-size: 16px;
+    }
+    .banner-link a {
+        font-size: 15px;
+        padding: 10px 15px;
+    }
+    .banner-bottom {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .banner-bottom {
+        padding-top: 50px;
+    }
+    .section-title {
+        font-size: 30px;
+    }
+    .work-card {
+        padding-left: 64px;
+    }
+    .work-card img {
+        width: 50px;
+    }
+    .work-card h3 {
+        font-size: 17px;
+    }
+    .work-card p {
+        font-size: 15px;
+    }
+    .work-more-content h2 {
+        font-size: 28px;
+    }
+    .work-more-content > p {
+        font-size: 17px;
+    }
+    .work-more-content ul li {
+        font-size: 14px;
+        padding-inline-start: 30px;
+    }
+    .work-more-content ul li::after {
+        border-left-width: 2px;
+        border-bottom-width: 2px;
+        height: 7px;
+        width: 12px;
+        left: 7px;
+        top: 6px;
+    }
+    .iphone img {
+        width: 130px;
+    }
+    .ipad {
+        left: 50px;
+        padding: 15px 60px;
+    }
+    .ipad img {
+        min-width: 520px;
+    }
+    .team p {
+        font-size: 16px;
+    }
+    .team-card h3 {
+        font-size: 20px;
+        margin-top: 20px;
+    }
+    .team-card h4 {
+        font-size: 18px;
+    }
+    .team-card p {
+        font-size: 16px;
+    }
+    .partners-container img {
+        height: 40px;
+    }
+    .voice .container {
+        padding: 0 10px;
+    }
+    .swiper-button-next, .swiper-button-prev {
+        width: 30px !important;
+        height: 30px !important;
+    }
+    .swiper-button-next::after,
+    .swiper-button-prev::after {
+        font-size: 10px !important;
+    }
+    .voice .swiper-slide {
+        padding: 0 40px;
+    }
+    .voice p {
+        font-size: 13px;
+    }
+    .voice h3 {
+        font-size: 14px;
+        margin: 1em 0;
+    }
+    .voice h4 {
+        font-size: 14px;
+    }
+    .faq-q h3 {
+        font-size: 14px;
+    }
+    .faq-a p {
+        font-size: 13px;
+    }
+    .faq-q::after {
+        border-width: 2px;
+        width: 10px;
+        height: 10px;
+        top: calc(50% - 6px);
+    }
+    .arabic h2 {
+        font-size: 26px;
+    }
+    .arabic p {
+        font-size: 16px;
+    }
+    .arabic a {
+        font-size: 15px;
+        padding: 5px 15px;
+    }
+    .podcast h2 {
+        font-size: 30px;
+    }
+    .podcast a {
+        font-size: 15px;
+        padding: 10px 15px;
+    }
+    .podcast a img {
+        width: 1.4em;
+    }
+    .footer-link {
+        margin-top: 30px;
+    }
+}
+@media (max-width: 400px) {
+    .banner h1 {
+        font-size: 28px;
+    }
+    .banner p {
+        font-size: 15px;
+    }
+    .section-title {
+        font-size: 24px;
+    }
+    .work-card {
+        padding-left: 60px;
+    }
+    .work-card img {
+        width: 48px;
+    }
+    .work-card h3 {
+        font-size: 15px;
+    }
+    .work-card p {
+        font-size: 13px;
+    }
+    .work-more-content h2 {
+        font-size: 24px;
+    }
+    .work-more-content > p {
+        font-size: 15px;
+    }
+    .work-more-content ul li {
+        font-size: 13px;
+        padding-inline-start: 2em;
+    }
+    .work-more-content ul li::after {
+        top: 5px;
+    }
+    .team p {
+        font-size: 14px;
+    }
+    .team-card h3 {
+        font-size: 20px;
+        margin-top: 20px;
+    }
+    .team-card h4 {
+        font-size: 18px;
+    }
+    .team-card p {
+        font-size: 16px;
+    }
+    .faq-q {
+        padding: 13px 30px 13px 13px;
+    }
+    .faq-a p {
+        padding: 0 13px 13px;
+    }
+    .faq-q::after {
+        right: 13px;
+    }
+    .arabic h2 {
+        font-size: 22px;
+    }
+    .arabic p {
+        font-size: 14px;
+    }
+    .podcast h2 {
+        font-size: 24px;
+    }
+}
