@@ -177,7 +177,7 @@ class Main extends Component {
                             slidesPerView={this.state.slidesPerView}
                             navigation
                             centeredSlides
-                            autoplay={{delay: 3000}}
+                            autoplay={{delay: 3000, disableOnInteraction: false}}
                             loop={true}
                         >
                             <SwiperSlide>
