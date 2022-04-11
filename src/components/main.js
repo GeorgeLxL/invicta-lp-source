@@ -146,14 +146,14 @@ class Main extends Component {
                             </div>
                             <div className="team-card">
                                 <div className="team-card-img">
-                                    <img src="./assets/img/member4.jpg" alt="Thomas Barnhill" />
+                                    <img src="./assets/img/member4.png" alt="Lucia Molitorisova" />
                                 </div>
-                                <h3>Thomas Barnhill</h3>
+                                <h3>Lucia Molitorisova</h3>
                                 <h4>CFO</h4>
-                                <p>Tom has been working as a founder, C-Suite professional, and consultant for 20+ years.</p>
+                                <p>VC Investment Manager and Senior Finance Consultant</p>
                                 <div className="team-card-link">
-                                    <a target="_blank" rel="noreferrer" href="mailto:barnhilltom@gmail.com"><img src="./assets/img/icon_mail.png" alt="Email Icon" /></a>
-                                    <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/thomas-barnhill-71ba8256/"><img src="./assets/img/icon_linkedin.png" alt="Linkedin Icon" /></a>
+                                    <a target="_blank" rel="noreferrer" href="mailto:lucia.molitorisova@gmail.com"><img src="./assets/img/icon_mail.png" alt="Email Icon" /></a>
+                                    <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/molitorisova/"><img src="./assets/img/icon_linkedin.png" alt="Linkedin Icon" /></a>
                                 </div>
                             </div>
                         </div>
@@ -251,7 +251,7 @@ class Main extends Component {
                 <section className="arabic">
                     <div className="container">
                         <h2>Are you an Arabic-speaking refugee?</h2>
-                        <p>Nawkish is our online community for talented displaced youth seeking employment.<br />We are growing our global community, with more than 26,000+ members today!</p>
+                        <p>Nawkish is our online community for talented displaced youth seeking employment.<br />We are growing our global community, with more than 28,500+ members today!</p>
                         <div className="arabic-link"><a target="_blank" rel="noreferrer" href="https://www.facebook.com/groups/2526819854242292"><span>f</span><span>JOIN US HERE</span></a></div>
                     </div>
                 </section>
