@@ -110,7 +110,7 @@ class Main extends Component {
                         <div className="team-container">
                             <div className="team-card">
                                 <div className="team-card-img">
-                                    <img src="./assets/img/member1.jpg" alt="Eden Tadesse" />
+                                    <img src="./assets/img/member1.png" alt="Eden Tadesse" />
                                 </div>
                                 <h3>Eden Tadesse</h3>
                                 <h4>CEO</h4>
@@ -122,7 +122,7 @@ class Main extends Component {
                             </div>
                             <div className="team-card">
                                 <div className="team-card-img">
-                                    <img src="./assets/img/member2.jpg" alt="Qussai Maklad" />
+                                    <img src="./assets/img/member2.png" alt="Qussai Maklad" />
                                 </div>
                                 <h3>Qussai Maklad</h3>
                                 <h4>COO</h4>
@@ -134,7 +134,7 @@ class Main extends Component {
                             </div>
                             <div className="team-card">
                                 <div className="team-card-img">
-                                    <img src="./assets/img/member3.jpg" alt="Sato Takeru" />
+                                    <img src="./assets/img/member3.png" alt="Sato Takeru" />
                                 </div>
                                 <h3>Sato Takeru</h3>
                                 <h4>CTO</h4>
