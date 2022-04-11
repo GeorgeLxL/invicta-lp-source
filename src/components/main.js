@@ -266,8 +266,8 @@ class Main extends Component {
                         <h2 className="section-title">Growth Accelerator Programs</h2>
                         <div className="partners-container">
                             <a target="_blank" rel="noreferrer" href="#"><img src="./assets/img/growth1.png" /></a>
-                            <a target="_blank" rel="noreferrer" href="#"><img src="./assets/img/growth2.jfif" /></a>
-                            <a target="_blank" rel="noreferrer" href="#"><img src="./assets/img/growth3.png" /></a>
+                            <a target="_blank" rel="noreferrer" href="#"><img src="./assets/img/growth2.png" /></a>
+                            <a target="_blank" rel="noreferrer" href="#"><img src="./assets/img/growth3.jpg" /></a>
                             <a target="_blank" rel="noreferrer" href="#"><img src="./assets/img/growth4.png" /></a>
                         </div>
                     </div>
