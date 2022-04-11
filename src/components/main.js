@@ -39,8 +39,8 @@ class Main extends Component {
                         <h1>Empowering untapped potential 💻🚀</h1>
                         <p>Invicta is an award-winning tech startup that helps skilled refugees find sustainable employment in their field of expertise.</p>
                         <div className="banner-link">
-                            <a target="_blank" rel="noreferrer" href="https://docs.google.com/forms/d/e/1FAIpQLSfTKZOqi3vLgzxcm2W517_Ibv5XXZWXMK08g2PDA8eOLdd7wA/viewform ">For Refugees</a>
-                            <a target="_blank" rel="noreferrer" href="https://docs.google.com/forms/d/e/1FAIpQLScS6Rua-gQby0dmG9b_Nln5DsaohxPImxFE33_dgZz2zMPb_g/viewform">For Businesses</a>
+                            <a target="_blank" rel="noreferrer" href="https://forms.gle/HKDPUCyBw9C8odYx6">For Refugees</a>
+                            <a target="_blank" rel="noreferrer" href="https://forms.gle/CB2sAztRTFRHm2DV7 ">For Businesses</a>
                         </div>
                     </div>
                     <div className="container banner-bottom">
@@ -72,7 +72,7 @@ class Main extends Component {
                                 <p>We work closely with both companies and displaced youth, to ensure maximum efficiency in project delivery.</p>
                             </div>
                         </div>
-                        <img src="./assets/img/work1.jfif" alt="working" />
+                        <img src="./assets/img/work1.jpg" alt="working" />
                     </div>
                 </section>
                 <section className="work-more">
@@ -164,9 +164,9 @@ class Main extends Component {
                         <h2 className="section-title">Our Partners</h2>
                         <div className="partners-container">
                             <a target="_blank" rel="noreferrer" href="#"><img src="./assets/img/partners1.jpg" /></a>
-                            <a target="_blank" rel="noreferrer" href="#"><img src="./assets/img/partners2.jfif" /></a>
-                            <a target="_blank" rel="noreferrer" href="#"><img src="./assets/img/partners3.png" /></a>
-                            <a target="_blank" rel="noreferrer" href="#"><img src="./assets/img/partners4.jfif" /></a>
+                            <a target="_blank" rel="noreferrer" href="#"><img src="./assets/img/partners2.png" /></a>
+                            <a target="_blank" rel="noreferrer" href="#"><img src="./assets/img/partners3.jpg" /></a>
+                            <a target="_blank" rel="noreferrer" href="#"><img src="./assets/img/partners4.png" /></a>
                         </div>
                     </div>
                 </section>
